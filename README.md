@@ -26,8 +26,10 @@ This project involves querying the Sakila DVD Rental database, which contains ex
 ## Queries and Analysis
 
 The following SQL queries were used to extract insights from the database:
-
-### TBD
+- Create a query that lists each movie, the film category it is classified in, and the number of times it has been rented out. Show only the movies that were rented out more than 30 times.
+- Provide a table with the movie titles and divide them into 4 levels (first_quarter, second_quarter, third_quarter, and final_quarter) based on the quartiles (25%, 50%, 75%) of the average rental duration(in the number of days) for movies across all categories.
+- Provide a table with the family-friendly film category, each of the quartiles, and the corresponding count of movies within each combination of film category for each corresponding rental duration category
+- Write a query that returns the store ID for the store, the year and month and the number of rental orders each store has fulfilled for that month.
 
 ## Visualizations
 Visualizations were created to illustrate key findings and insights obtained from the queries. 
