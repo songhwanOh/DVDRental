@@ -58,19 +58,17 @@ ORDER BY categoryName, quartile;
 
 -- Q4 Query used for fourth insight
 SELECT
-	EXTRACT (MONTH FROM rental_date) AS rental_month,
-	EXTRACT (YEAR FROM rental_date) AS rental_year,
+	EXTRACT (YEAR FROM rental_date) || '-' || 
+	EXTRACT (MONTH FROM rental_date)  AS rental_month,
 	store_id,
 	COUNT(rental_date) AS count_rentals
 FROM
 	rental r
 	JOIN inventory i ON r.inventory_id = i.inventory_id
 GROUP BY 
-	rental_month, 
-	rental_year, 
+	rental_month,
 	store_id
 ORDER BY 
-	rental_year,
 	rental_month,
 	count_rentals DESC;
 	
